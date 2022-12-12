@@ -1,0 +1,21 @@
+{
+  "name": "poll-api-lambda-handler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "run:build": "npm run prebuild && npm run build && npm run postbuild",
+    "prebuild": "rm -rf dist",
+    "build": "tsc",
+    "postbuild": "cd dist && zip -r index.zip * "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "pg": "^8.8.0",
+    "sequelize": "^6.25.7",
+    "sequelize-typescript": "^2.1.5",
+    "typescript": "^4.9.4"
+  }
+}
